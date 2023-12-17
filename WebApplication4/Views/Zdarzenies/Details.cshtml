@@ -1,0 +1,50 @@
+﻿@model WebApplication4.Models.Zdarzenie
+
+@{
+    ViewBag.Title = "Szczegóły zdarzenia";
+}
+
+<h2>Szczegóły zdarzenia</h2>
+
+<div>
+    <h4>Zdarzenie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Obywatel.Pesel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Obywatel.Pesel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_Patrolu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_Patrolu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Charakter_Zdarzenia.Nazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Charakter_Zdarzenia.Nazwa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edytuj", "Edit", new { id = Model.Id_Zdarzenia }) |
+    @Html.ActionLink("Powrót do spisu", "Index")
+</p>

@@ -1,0 +1,58 @@
+﻿@model WebApplication4.Models.Funkcjonariusz
+
+@{
+    ViewBag.Title = "Szczegóły";
+}
+
+<h2>Szczegóły</h2>
+
+<div>
+    <h4>Funkcjonariusz</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Stopien.Nazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stopien.Nazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_Obywatela)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_Obywatela)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.adres_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adres_Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wyksztalcenie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wyksztalcenie)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edytuj", "Edit", new { id = Model.id_Funkcjonariusza }) |
+    @Html.ActionLink("Powrót do spisu", "Index")
+</p>

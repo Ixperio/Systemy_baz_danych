@@ -1,0 +1,64 @@
+﻿@model IEnumerable<WebApplication4.Models.Samochod_Zarejestrowany>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Samochody zarejestrowane</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Samochod.Marka)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nr_Rejestracyjny)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Przebieg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Id_Obywatela)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rocznik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ubezpieczenie)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Samochod.Marka)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nr_Rejestracyjny)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Przebieg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id_Obywatela)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rocznik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ubezpieczenie)
+        </td>
+        <td>
+             @Html.ActionLink("Edytuj", "Edit", new { id=item.Id }) |
+      @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+      @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        
+        </td>
+    </tr>
+}
+
+</table>

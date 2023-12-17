@@ -1,0 +1,64 @@
+﻿@model WebApplication4.Models.Grafik
+
+@{
+    ViewBag.Title = "Usuń";
+}
+
+<h2>Usuń</h2>
+
+<h3>Jesteś pewien ,że chcesz usunąć pozycje?</h3>
+<div>
+    <h4>Grafik</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Funkcjonariusz.adres_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Funkcjonariusz.adres_Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Godzina_Przyjscia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Godzina_Przyjscia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Godzina_Wyjscia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Godzina_Wyjscia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_Zmiany)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_Zmiany)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Powrót do spisu", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,58 @@
+﻿@model WebApplication4.Models.Grafik
+
+@{
+    ViewBag.Title = "Szczegóły";
+}
+
+<h2>Szczegóły</h2>
+
+<div>
+    <h4>Grafik</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Funkcjonariusz.adres_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Funkcjonariusz.adres_Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Godzina_Przyjscia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Godzina_Przyjscia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Godzina_Wyjscia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Godzina_Wyjscia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_Zmiany)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_Zmiany)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edytuj", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Powrót do spisu", "Index")
+</p>

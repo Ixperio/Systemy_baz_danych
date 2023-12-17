@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Samochody";
+}
+<main aria-labelledby="title">
+    <h2 id="title">@ViewBag.Title</h2>
+
+
+    <!--
+     <div class="row">
+         <br />
+         @Html.ActionLink("Radiowoz", "Index", "Radiowoz_policyjny")
+         <br />
+         @Html.ActionLink("Samochod", "Index", "Samochods")
+         <br />
+         @Html.ActionLink("Samochod_Zarejestrowany", "Index", "Samochod_Zarejestrowany")
+         <br />
+
+
+
+     </div>
+        -->
+
+
+    <div  role="group">
+        <a href="@Url.Action("Index", "Radiowoz_policyjny")" class="btn btn-primary" style="margin-right: 10px;">Radiowoz</a>
+        <a href="@Url.Action("Index", "Samochods")" class="btn btn-primary" style="margin-right: 10px">Samochod</a>
+        <a href="@Url.Action("Index", "Samochod_Zarejestrowany")" class="btn btn-primary">Samochod_Zarejestrowany</a>
+    </div>
+
+
+
+</main>

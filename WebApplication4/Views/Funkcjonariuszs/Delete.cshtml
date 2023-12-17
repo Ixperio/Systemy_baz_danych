@@ -1,0 +1,64 @@
+﻿@model WebApplication4.Models.Funkcjonariusz
+
+@{
+    ViewBag.Title = "Usuń";
+}
+
+<h2>Usuń</h2>
+
+<h3>Jesteś pewien ,że chcesz usunąć funkcjonariusza?</h3>
+<div>
+    <h4>Funkcjonariusz</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Stopien.Nazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stopien.Nazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_Obywatela)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_Obywatela)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.adres_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adres_Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wyksztalcenie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wyksztalcenie)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Powrót do spisu", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<WebApplication4.Models.Grafik>
+
+@{
+    ViewBag.Title = "Grafik pracowników";
+}
+
+<h2>Dodaj </h2>
+
+<p>
+    @Html.ActionLink("Dodaj nowy", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Funkcjonariusz.adres_Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Godzina_Przyjscia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Godzina_Wyjscia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Id_Zmiany)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Funkcjonariusz.adres_Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Godzina_Przyjscia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Godzina_Wyjscia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id_Zmiany)
+        </td>
+        <td>
+            @Html.ActionLink("Edytuj", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Szczegóły", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Usuń", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

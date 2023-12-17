@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Funkcjonariusze";
+}
+<h2>@ViewBag.Title</h2>
+<main>
+        
+        <div style="display: grid; grid-template-columns: max-content max-content max-content max-content max-content; grid-column-gap: 20px;">
+            <a href="@Url.Action("Index", "Funkcjonariuszs")" class="btn btn-primary " style="margin-right: 20px;">Funkcjonariusz</a>
+
+            <a href="@Url.Action("Index", "Patrols")" class="btn btn-primary " style="margin-right: 20px;">Patrol</a>
+
+            <a href="@Url.Action("Index", "Grafiks")" class="btn btn-primary">Grafik</a>
+
+            <a href="@Url.Action("Index", "Zmianas")" class="btn btn-primary ">Zmiana</a>
+
+            <a href="@Url.Action("Index", "Stopiens")" class="btn btn-primary btn-rounded" style="margin-right: 10px;">Stopien</a>
+        </div>
+        
+</main>

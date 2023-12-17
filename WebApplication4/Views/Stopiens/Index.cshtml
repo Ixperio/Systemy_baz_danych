@@ -1,0 +1,39 @@
+﻿@model IEnumerable<WebApplication4.Models.Stopien>
+
+@{
+    ViewBag.Title = "Stopnie ";
+}
+
+<h2>Stopnie</h2>
+
+<p>
+    @Html.ActionLink("Dodaj nowy", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nazwa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Zarobki)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nazwa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Zarobki)
+        </td>
+        <td>
+            @Html.ActionLink("Edytuj", "Edit", new { id=item.Id_Stopnia }) |
+            @Html.ActionLink("Szczegóły", "Details", new { id=item.Id_Stopnia }) |
+            @Html.ActionLink("Usuń", "Delete", new { id=item.Id_Stopnia })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Zdarzenia";
+}
+<main aria-labelledby="title">
+    <h2 id="title">@ViewBag.Title</h2>
+    <!--
+    <div class="row">
+        <br />
+        @Html.ActionLink("Zdarzenia", "Index", "Zdarzenies")
+        <br />
+        @Html.ActionLink("Charakter_zdarzenia", "Index", "Charakter_zdarzenia")
+        <br />
+        </div>
+        -->
+    <div  role="group">
+        <a href="@Url.Action("Index", "Zdarzenies")" class="btn btn-primary" style="margin-right: 10px;">Zdarzenia</a>
+        <a href="@Url.Action("Index", "Charakter_zdarzenia")" class="btn btn-primary">Charakter_zdarzenia</a>
+    </div>
+
+</main>

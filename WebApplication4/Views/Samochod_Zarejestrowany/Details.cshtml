@@ -1,0 +1,66 @@
+﻿@model WebApplication4.Models.Samochod_Zarejestrowany
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Szczegóły</h2>
+
+<div>
+    <h4>Samochod_Zarejestrowany</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Samochod.Marka)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Samochod.Marka)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nr_Rejestracyjny)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nr_Rejestracyjny)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Przebieg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Przebieg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_Obywatela)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_Obywatela)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rocznik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rocznik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ubezpieczenie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ubezpieczenie)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edytuj", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Powrót do spisu", "Index")
+</p>

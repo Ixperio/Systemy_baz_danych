@@ -1,0 +1,72 @@
+﻿@model WebApplication4.Models.Radiowoz_policyjny
+
+@{
+    ViewBag.Title = "Usun";
+}
+
+<h2>Usuń</h2>
+
+<h3>Jesteś pewien ,że chcesz usunąć zdarzenie?</</h3>
+<div>
+    <h4>Radiowoz_policyjny</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Samochod.Marka)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Samochod.Marka)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nr_Rejestracyjny)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nr_Rejestracyjny)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rocznik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rocznik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ubezpieczenie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ubezpieczenie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Przebieg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Przebieg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Przeglad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Przeglad)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Usuń" class="btn btn-default" /> |
+            @Html.ActionLink("Powrót do spisu", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,42 @@
+﻿@model WebApplication4.Models.Zmiana
+
+@{
+    ViewBag.Title = "Szczegóły zmiany";
+}
+
+<h2>Szczegóły zmiany</h2>
+
+<div>
+    <h4>Zmiana</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Godzina_Rozpoczecia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Godzina_Rozpoczecia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Godzina_Zakonczenia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Godzina_Zakonczenia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edytuj", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Powrót do spisu", "Index")
+</p>
